@@ -172,6 +172,20 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\docs\Birmingham Large Users Group Evaluation.docx" />
+    <None Include="Content\docs\BLUG Class Announcement Template.DOC" />
+    <None Include="Content\docs\BLUG Cost Savings Form.doc" />
+    <None Include="Content\docs\BLUG Cost Savings.xls" />
+    <None Include="Content\docs\BLUG Meeting Minutes Template.doc" />
+    <None Include="Content\docs\BLUG New Member Kit.doc" />
+    <None Include="Content\docs\BLUG Roster Template.doc" />
+    <None Include="Content\docs\BLUG training vendors.xls" />
+    <None Include="Content\docs\BLUGNewMemberInvitation.pdf" />
+    <None Include="Content\docs\certificate template.pub" />
+    <None Include="Content\docs\Course Syllabus Outline Template.doc" />
+    <None Include="Content\docs\WelcomeLetter.pdf" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

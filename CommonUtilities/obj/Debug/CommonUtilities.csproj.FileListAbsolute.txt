@@ -1,0 +1,6 @@
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\bin\Debug\CommonUtilities.dll.config
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\bin\Debug\CommonUtilities.dll
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\bin\Debug\CommonUtilities.pdb
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\obj\Debug\CommonUtilities.dll
+C:\Users\fo\Documents\Projects\BLUG\CODE\CommonUtilities\obj\Debug\CommonUtilities.pdb
