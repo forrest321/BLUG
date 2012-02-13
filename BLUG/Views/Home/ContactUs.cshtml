@@ -1,8 +1,31 @@
-﻿@model dynamic
-
+﻿@model BLUG.Models.ContactUsModel
 @{
     ViewBag.Title = "Contact Us";
     ViewBag.ContactUsSelected = "active";
 }
-
-CONTACTS
+<div class="span9">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h1>Contact Us</h1>
+            <div>@Html.ValidationSummary(true)</div>
+            <div>
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.EmailAddress)
+                @Html.TextBoxFor(m => m.EmailAddress)
+                @Html.ValidationMessageFor(m => m.EmailAddress)
+            </div>
+            <div>
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message)
+                @Html.ValidationMessageFor(m => m.Message)
+            </div>
+            <input type="submit" value="Contact Us" />
+            <input type="reset" value="Cancel"/>
+        </div>
+    }
+</div>

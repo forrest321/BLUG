@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLUG.Models;
 
 namespace BLUG.Controllers
 {
@@ -21,6 +22,12 @@ namespace BLUG.Controllers
         }
 
         public ActionResult ContactUs()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ContactUs(ContactUsModel model)
         {
             return View();
         }
