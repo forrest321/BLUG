@@ -1,7 +1,6 @@
 ﻿@model BLUG.Models.ContactUsModel
 @{
     ViewBag.Title = "Contact Us";
-    ViewBag.ContactUsSelected = "active";
 }
 <div class="span9">
     @using (Html.BeginForm())
@@ -29,3 +28,8 @@
         </div>
     }
 </div>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#commentForm").validate();
+    });
+  </script>

@@ -29,6 +29,26 @@ namespace BLUG.Controllers
         [HttpPost]
         public ActionResult ContactUs(ContactUsModel model)
         {
+            //WRONG!
+            if (!ViewData.ModelState.IsValid)
+                return View(model);
+            else
+            {
+                //TODO:  Validate that they want to send the email.
+                if (CommonUtilities.Email.Send("toAddress@here.com", "changeToArray", "ditto", "from address", "subject", "body", true))
+                {
+                    //woohoo! email sent
+                    //SEND TO THANKS, ACCOUNT, etc
+                }
+                else
+                {
+                    //something happened.  or didnt happen.
+                    //TODO: figure out whats wrong
+                    //user gonna have to fix that
+                    return View(model);
+                }
+            }
+
             return View();
         }
 

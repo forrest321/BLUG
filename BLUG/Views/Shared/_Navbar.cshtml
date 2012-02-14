@@ -6,10 +6,10 @@
             </a><a class="brand" href="#">BLUG</a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li class="@ViewBag.HomeSelected">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li class="@ViewBag.AboutUsSelected">@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li class="@ViewBag.HistorySelected">@Html.ActionLink("History", "History", "Home")</li>
-                    <li class="@ViewBag.ContactUsSelected">@Html.ActionLink("Contact Us", "ContactUs", "Home")</li>
+                    <li class="@ViewBag.Title == "Home Page" ? "active">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="@ViewBag.Title == "About" ? "active">@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li class="@ViewBag.Title == "History" ? "active">@Html.ActionLink("History", "History", "Home")</li>
+                    <li class="@ViewBag.Title == "Contact Us" ? "active">@Html.ActionLink("Contact Us", "ContactUs", "Home")</li>
                 </ul>
                 @if (ViewBag.UserIsLoggedIn == "true")
                 {

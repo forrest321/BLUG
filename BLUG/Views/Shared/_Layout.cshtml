@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>BLUG</title>
+    <title>@ViewBag.Title ?? BLUG</title>
 
     <!-- HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         
-        @Html.Partial("_Sidebar")
+        @*Html.Partial("_Sidebar")*@
         
         @RenderBody()
 
