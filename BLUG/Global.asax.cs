@@ -31,6 +31,7 @@ namespace BLUG
 
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new Models.SampleData());
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

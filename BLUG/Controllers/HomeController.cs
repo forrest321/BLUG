@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLUG;
 using BLUG.Models;
 
 namespace BLUG.Controllers
@@ -29,32 +31,50 @@ namespace BLUG.Controllers
         [HttpPost]
         public ActionResult ContactUs(ContactUsModel model)
         {
-            //WRONG!
-            if (!ViewData.ModelState.IsValid)
-                return View(model);
+            //Validation failed
+            if (!ViewData.ModelState.IsValid) return View(model);
+            
+            if (CommonUtilities.Email.Send(ContactEmailAddress, string.Empty, string.Empty, model.EmailAddress, ContactEmailSubject, model.EmailAddress, true))
+            {
+                ViewBag.MessageSent = "true";
+            }
             else
             {
-                //TODO:  Validate that they want to send the email.
-                if (CommonUtilities.Email.Send("toAddress@here.com", "changeToArray", "ditto", "from address", "subject", "body", true))
-                {
-                    //woohoo! email sent
-                    //SEND TO THANKS, ACCOUNT, etc
-                }
-                else
-                {
-                    //something happened.  or didnt happen.
-                    //TODO: figure out whats wrong
-                    //user gonna have to fix that
-                    return View(model);
-                }
+                ViewBag.MessageSent = "false";
             }
 
-            return View();
+            return View(model);
         }
 
         public ActionResult History()
         {
             return View();
         }
+
+        #region properties
+        private static string ContactEmailAddress
+        {
+            get
+            {
+                var rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
+                var emailAddress = rootWebConfig.AppSettings.Settings["ContactEmail_ToAddress"];
+                if (emailAddress == null || string.IsNullOrEmpty(emailAddress.Value))
+                    throw new ConfigurationErrorsException("Configure ContactEmail_ToAddress as an app setting in the root web.config");
+                return emailAddress.Value;
+            }
+        }
+
+        private static string ContactEmailSubject
+        {
+            get
+            {
+                var rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(null);
+                var emailAddress = rootWebConfig.AppSettings.Settings["ContactEmail_Subject"];
+                if (emailAddress == null || string.IsNullOrEmpty(emailAddress.Value))
+                    throw new ConfigurationErrorsException("Configure ContactEmail_Subject as an app setting in the root web.config");
+                return emailAddress.Value;
+            }
+        }
+        #endregion
     }
 }
