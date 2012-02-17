@@ -91,7 +91,9 @@
     <Content Include="App_Code\BlugSettings.cs" />
     <Compile Include="BlugEntities.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClassOfferingController.cs" />
     <Compile Include="Controllers\CourseCatalogController.cs" />
+    <Compile Include="Controllers\EvaluationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
@@ -101,10 +103,12 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ClassOffering.cs" />
+    <Compile Include="Models\ClassOfferingEvaluation.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\HomeModels.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\SampleData.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -230,6 +234,17 @@
     <Content Include="Views\Vendor\Create.cshtml" />
     <Content Include="Views\Vendor\Edit.cshtml" />
     <Content Include="Views\Vendor\Delete.cshtml" />
+    <Content Include="Views\ClassOffering\Index.cshtml" />
+    <Content Include="Views\ClassOffering\Details.cshtml" />
+    <Content Include="Views\ClassOffering\Create.cshtml" />
+    <Content Include="Views\ClassOffering\Edit.cshtml" />
+    <Content Include="Views\ClassOffering\Delete.cshtml" />
+    <Content Include="Views\Evaluation\Index.cshtml" />
+    <Content Include="Views\Evaluation\Details.cshtml" />
+    <Content Include="Views\Evaluation\Create.cshtml" />
+    <Content Include="Views\Evaluation\Edit.cshtml" />
+    <Content Include="Views\Evaluation\Delete.cshtml" />
+    <Content Include="Views\Helpers\_Evals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonUtilities\CommonUtilities.csproj">

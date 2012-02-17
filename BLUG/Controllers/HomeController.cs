@@ -24,6 +24,7 @@ namespace BLUG.Controllers
             message.AppendLine(db.Vendors.Count().ToString(CultureInfo.InvariantCulture) + " Vendor(s) ");
             
             ViewBag.Message = message.ToString();
+            ViewBag.Foo = "bar";
 
             return View();
         }

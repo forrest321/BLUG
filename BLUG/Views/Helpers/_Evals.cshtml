@@ -1,0 +1,14 @@
+﻿@using BLUG.Models
+@helper EvalListing(List<ClassOfferingEvaluation> evals) {
+    
+    <table>
+        @foreach(var e in evals)
+        {
+            <tr><td>@e.Comments</td></tr>
+        }
+        
+
+    </table>
+    
+    
+}

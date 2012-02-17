@@ -10,5 +10,6 @@ namespace BLUG
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<ClassOfferingEvaluation> Evaluations { get; set; } 
     }
 }
