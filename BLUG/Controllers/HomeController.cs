@@ -17,11 +17,11 @@ namespace BLUG.Controllers
 
         public ActionResult Index()
         {
-            var message = new StringBuilder(db.Courses.Count().ToString(CultureInfo.InvariantCulture) + " Course(s)<br />");
-            message.AppendLine(db.Classes.Count().ToString(CultureInfo.InvariantCulture) + " Class(es)<br />");
-            message.AppendLine(db.Instructors.Count().ToString(CultureInfo.InvariantCulture) + " Instructor(s)<br />");
-            message.AppendLine(db.Locations.Count().ToString(CultureInfo.InvariantCulture) + " Location(s)<br />");
-            message.AppendLine(db.Vendors.Count().ToString(CultureInfo.InvariantCulture) + " Vendor(s)<br />");
+            var message = new StringBuilder(db.Courses.Count().ToString(CultureInfo.InvariantCulture) + " Course(s) |");
+            message.AppendLine(db.ClassOfferings.Count().ToString(CultureInfo.InvariantCulture) + " Class(es) |");
+            message.AppendLine(db.Instructors.Count().ToString(CultureInfo.InvariantCulture) + " Instructor(s) |");
+            message.AppendLine(db.Locations.Count().ToString(CultureInfo.InvariantCulture) + " Location(s) |");
+            message.AppendLine(db.Vendors.Count().ToString(CultureInfo.InvariantCulture) + " Vendor(s) ");
             
             ViewBag.Message = message.ToString();
 

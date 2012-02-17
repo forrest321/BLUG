@@ -6,10 +6,10 @@ using System.Web.Mvc;
 namespace BLUG.Models
 {
     
-    public class Class
+    public class ClassOffering
     {
-       
-        public int ClassId { get; set; }
+
+        public int ClassOfferingId { get; set; }
 
         [Required]
         [DisplayName("Vendor")]

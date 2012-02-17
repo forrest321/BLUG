@@ -1,0 +1,50 @@
+﻿@model BLUG.Models.ClassOffering
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ClassOffering</legend>
+
+    <div class="display-label">Vendor</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Vendor.Name)
+    </div>
+
+    <div class="display-label">Instructor</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Instructor.Name)
+    </div>
+
+    <div class="display-label">Course</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Course.Name)
+    </div>
+
+    <div class="display-label">Location</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location.Name)
+    </div>
+
+    <div class="display-label">StartDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">EndDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndDate)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ClassOfferingId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

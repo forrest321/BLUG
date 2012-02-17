@@ -3,9 +3,9 @@ using System.Data.Entity;
 
 namespace BLUG.Models
 {
-    public class SampleData : DropCreateDatabaseAlways<BlugEntities>
+    public static class SampleData
     {
-        protected override void Seed(BlugEntities context)
+        public static void Seed(BlugEntities context)
         {
             new List<Course>
                 {

@@ -93,18 +93,18 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CourseCatalogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\ClassOffering.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\HomeModels.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\Location.cs" />
-    <Compile Include="Models\SampleData.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,6 +215,21 @@
     <Content Include="Views\CourseCatalog\Create.cshtml" />
     <Content Include="Views\CourseCatalog\Edit.cshtml" />
     <Content Include="Views\CourseCatalog\Delete.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\Details.cshtml" />
+    <Content Include="Views\Instructor\Create.cshtml" />
+    <Content Include="Views\Instructor\Edit.cshtml" />
+    <Content Include="Views\Instructor\Delete.cshtml" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
+    <Content Include="Views\Vendor\Index.cshtml" />
+    <Content Include="Views\Vendor\Details.cshtml" />
+    <Content Include="Views\Vendor\Create.cshtml" />
+    <Content Include="Views\Vendor\Edit.cshtml" />
+    <Content Include="Views\Vendor\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonUtilities\CommonUtilities.csproj">
