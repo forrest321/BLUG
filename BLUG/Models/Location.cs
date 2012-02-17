@@ -4,10 +4,10 @@ using System.Web.Mvc;
 
 namespace BLUG.Models
 {
-    [Bind(Exclude="LocationId")]
+    
     public class Location
     {
-        [ScaffoldColumn(false)]
+        
         public int LocationId { get; set; }
 
         [Required]

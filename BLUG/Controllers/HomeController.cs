@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using BLUG;
@@ -11,9 +13,17 @@ namespace BLUG.Controllers
 {
     public class HomeController : Controller
     {
+        private BlugEntities db = new BlugEntities();
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            var message = new StringBuilder(db.Courses.Count().ToString(CultureInfo.InvariantCulture) + " Course(s)<br />");
+            message.AppendLine(db.Classes.Count().ToString(CultureInfo.InvariantCulture) + " Class(es)<br />");
+            message.AppendLine(db.Instructors.Count().ToString(CultureInfo.InvariantCulture) + " Instructor(s)<br />");
+            message.AppendLine(db.Locations.Count().ToString(CultureInfo.InvariantCulture) + " Location(s)<br />");
+            message.AppendLine(db.Vendors.Count().ToString(CultureInfo.InvariantCulture) + " Vendor(s)<br />");
+            
+            ViewBag.Message = message.ToString();
 
             return View();
         }

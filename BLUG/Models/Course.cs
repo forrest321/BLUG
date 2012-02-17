@@ -4,10 +4,10 @@ using System.Web.Mvc;
 
 namespace BLUG.Models
 {
-    [Bind(Exclude = "CourseId")]
+    
     public class Course
     {
-        [ScaffoldColumn(false)]
+       
         public int CourseId { get; set; }
         [Required]
         [DataType(DataType.Text)]

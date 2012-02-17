@@ -5,10 +5,10 @@ using System.Web.Mvc;
 
 namespace BLUG.Models
 {
-    [Bind(Exclude = "ClassId")]
+    
     public class Class
     {
-        [ScaffoldColumn(false)]
+       
         public int ClassId { get; set; }
 
         [Required]

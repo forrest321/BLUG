@@ -5,10 +5,10 @@ using System.Web.Mvc;
 
 namespace BLUG.Models
 {
-    [Bind(Exclude = "InstructorId")]
+    
     public class Instructor
     {
-        [ScaffoldColumn(false)]
+        
         public int InstructorId { get; set; }
 
         [Required]
@@ -17,10 +17,6 @@ namespace BLUG.Models
 
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-
-        [DisplayName("Vendor")]
-        public int VendorId { get; set; }
-
-        public virtual Vendor Vendor { get; set; }
+        
     }
 }

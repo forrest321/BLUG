@@ -1,11 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+using System.Collections.Generic;
+using BLUG.Models;
 
-namespace BLUG.Models
+namespace BLUG.Migrations
 {
-    public class SampleData : DropCreateDatabaseAlways<BlugEntities>
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<BLUG.BlugEntities>
     {
-        protected override void Seed(BlugEntities context)
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = false;
+        }
+
+        protected override void Seed(BLUG.BlugEntities context)
         {
             new List<Course>
                 {

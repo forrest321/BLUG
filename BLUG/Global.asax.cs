@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using BLUG.Models;
 
 namespace BLUG
 {
@@ -31,7 +33,8 @@ namespace BLUG
 
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new Models.SampleData());
+            //Database.SetInitializer(new SampleData());
+            
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);

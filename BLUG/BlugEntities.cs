@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
+using BLUG.Models;
 
-namespace BLUG.Models
+namespace BLUG
 {
     public class BlugEntities : DbContext
     {

@@ -1,13 +1,14 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
 namespace BLUG.Models
 {
-    [Bind(Exclude = "VendorId")]
+    
     public class Vendor
     {
-        [ScaffoldColumn(false)]
+        
         public int VendorId { get; set; }
 
         [Required]
@@ -21,6 +22,8 @@ namespace BLUG.Models
         [DisplayName("Contact Phone Number")]
         [DataType(DataType.PhoneNumber)]
         public string ContactPhone { get; set; }
+
+        public virtual ICollection<Instructor> Instructors { get; set; }
 
     }
 }
